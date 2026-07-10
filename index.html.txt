@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مستودع الآفاتارات</title>
+    <style>
+        body { background-color: #001a33; color: white; font-family: Arial, sans-serif; text-align: center; padding-top: 30px; direction: rtl; }
+        h1 { color: #00aaff; }
+        table { margin: 0 auto; width: 90%; max-width: 500px; border-collapse: collapse; background: #002b55; }
+        td { padding: 15px; border-bottom: 1px solid #004080; }
+        .btn { display: block; background-color: #00aa00; color: white; text-decoration: none; padding: 10px; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>قائمة الآفاتارات المتاحة</h1>
+    <table>
+        <tbody id="fileList">
+            <!-- الملفات بتظهر هنا تلقائياً -->
+        </tbody>
+    </table>
+
+    <script>
+        // هنا حط أسماء ملفاتك اللي رفعتها في جيت هاب
+        const files = [
+            { name: "ليون - رزدنت إيفل", file: "leon.edat" },
+            { name: "شخصية أنمي", file: "anime.edat" },
+            { name: "قراند", file: "gta.edat" }
+        ];
+
+        const list = document.getElementById("fileList");
+        files.forEach(item => {
+            list.innerHTML += `<tr><td>${item.name}</td><td><a href="${item.file}" class="btn">تحميل</a></td></tr>`;
+        });
+    </script>
+</body>
+</html>
